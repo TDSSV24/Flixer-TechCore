@@ -1,0 +1,19 @@
+.navbar-logo {
+    position: relative;
+    height: 60px;
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color:#212222 !important;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-icon {
+    position: relative;
+    height: 40px;
+}
+
