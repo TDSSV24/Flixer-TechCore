@@ -24,74 +24,90 @@
     </nav>
     <!-- navbar (fim) -->
 
+    <!-- Principal (inicio) -->
 
-    <style>
-        body {
-            background-color: rgb(0, 0, 0);
-        }
-    </style>
+    <!-- Principal (fim) -->
 
     <br><br><br>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="text-center">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Básico</h5>
-                        <p class="card-text"></p>
-                        <p> * Limite de uma tela</p>
-                        <p> * Assistir em dispositivos diferentes</p>
-                        <p> * Sem download offline</p>
-                        <p> * Acesso a 70% do catálogo</p>
-                        <p> R$18,90</p>
-                    </div>
-                    <div class="card-footer">
-                        <button type="button" class="btn btn-danger">Comprar</button>
-                    </div>
+
+    <header class="masthead">
+        <div class="container px-4 px-lg-5 h-100">
+            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-8 align-self-end">
+                    <h1 class="text-white font-weight-bold">Filmes, séries e muito mais, sem limites</h1>
+                    <hr class="divider" />
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <p class="text-white mb-5">A partir de R$ 18,90. Cancele quando quiser.</p>
+                    <p class="text-white mb-5">Quer assistir? Conheça nossos planos.</p>
+                    <a class="btn btn-danger btn-xl" href="#planos">VAMOS LÁ</a>
                 </div>
             </div>
-            <div class="text-center">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Padrão</h5>
-                        <p class="card-text">
-                        <p>* Limite 2 telas</p>
-                        <p> * Até 3 perfis personalizados</p>
-                        <p> * Download offline de até 3 filmes</p>
-                        <p> * Acesso a 100% do catálogo</p>
-                        <p> R$25,90</p>
+        </div>
+    </header>
 
-
-                    </div>
-                    <div class="card-footer">
-                        <button type="button" class="btn btn-danger">Comprar</button>
-
+    <!-- Planos (inicio) -->
+    <section class="page-section" id="planos">
+        <div class="container px-4 px-lg-5 text-center">
+            <h2 class="mb-4 text-white">Planos</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="text-center">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Básico</h5>
+                            <p class="card-text"></p>
+                            <p> * Limite de uma tela</p>
+                            <p> * Assistir em dispositivos diferentes</p>
+                            <p> * Sem download offline</p>
+                            <p> * Acesso a 70% do catálogo</p>
+                            <p> R$18,90</p>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-danger">Assinar</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="text-center">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Premium</h5>
-                        <p class="card-text">* Limite de 5 telas</p>
-                        <p> * Resolução até 4k Ultra HD e HDR</p>
-                        <p> * Perfis personalizados ilimitados</p>
-                        <p> * Acesso a 100% do catálogo</p>
-                        <p> R$39,90</p>
-
+                <div class="text-center">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Padrão</h5>
+                            <p class="card-text">
+                            <p>* Limite 2 telas</p>
+                            <p> * Até 3 perfis personalizados</p>
+                            <p> * Download offline de até 3 filmes</p>
+                            <p> * Acesso a 100% do catálogo</p>
+                            <p> R$25,90</p>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-danger">Assinar</button>
+                        </div>
                     </div>
-                    <div class="card-footer">
-                        <button type="button" class="btn btn-danger">Comprar</button>
-
+                </div>
+                <div class="text-center">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Premium</h5>
+                            <p class="card-text">* Limite de 5 telas</p>
+                            <p> * Resolução até 4k Ultra HD e HDR</p>
+                            <p> * Perfis personalizados ilimitados</p>
+                            <p> * Acesso a 100% do catálogo</p>
+                            <p> R$39,90</p>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-danger">Assinar</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- Planos (Fim) -->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
