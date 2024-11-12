@@ -54,6 +54,11 @@
       cursor: pointer;
       z-index: 1000;
     }
+
+    .search-margin {
+      margin-left: 2px;
+      margin-right: 2px;
+    }
   </style>
 </head>
 
@@ -65,29 +70,30 @@
       <a href="login/" class="navbar-brand">
         <img src="img/logonovaflixer.PNG" class="navbar-logo" alt="Logo">
       </a>
-      
+
       <!-- Botão para colapsar navbar em telas menores -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <!-- Conteúdo colapsável da navbar -->
       <div class="collapse navbar-collapse" id="navbarContent">
-       
-        <!-- Formulário de pesquisa centralizado -->
-        <form class="d-flex mr-auto" role="search" style="width: 50%;">
+
+        <form class="d-flex ms-auto" role="search" style="width: 50%; margin-left: 20px; margin-right: 20px;">
           <div class="input-group">
             <span class="input-group-text" id="search-icon">
               <i class="bi bi-search"></i>
             </span>
-            <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-icon">
+            <input type="search" class="form-control" placeholder="procurar..." aria-label="Search"
+              aria-describedby="search-icon">
           </div>
         </form>
-
         <!-- Botões de dropdown alinhados à direita -->
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle btn btn-multicolorido me-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle btn btn-multicolorido me-2" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
               Filmes
             </a>
             <ul class="dropdown-menu">
@@ -100,9 +106,10 @@
               <li><a class="dropdown-item dropdown-item-multicolorido" href="#terror">Terror</a></li>
             </ul>
           </li>
-          
+
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle btn btn-multicolorido" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle btn btn-multicolorido" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
               Séries
             </a>
             <ul class="dropdown-menu">
