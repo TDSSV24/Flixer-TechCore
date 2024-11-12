@@ -5,39 +5,110 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>flixer.com</title>
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+  <style>
+    /* Efeito multicolorido para os botões de dropdown */
+    .btn-multicolorido {
+      background: linear-gradient(45deg, #ff5f6d, #ffc371, #40c9ff, #ffb6c1);
+      background-size: 300%;
+      color: white;
+      border: none;
+      transition: background-position 0.5s ease, transform 0.2s;
+    }
+
+    .btn-multicolorido:hover {
+      background-position: right center;
+    }
+
+    /* Efeito multicolorido para os itens do dropdown */
+    .dropdown-item-multicolorido {
+      background: linear-gradient(45deg, #ffffff, #ffffff, #f5f2ed, #ffffff);
+      background-size: 300%;
+      color: rgb(0, 0, 0);
+      transition: background-position 0.5s ease, transform 0.2s;
+    }
+
+    .dropdown-item-multicolorido:hover {
+      background-position: left center;
+      color: rgb(108, 106, 106);
+    }
+
+    .dropdown-item-multicolorido:active {
+      transform: scale(1.05);
+    }
+     /* Estilo para o botão de voltar ao topo */
+     .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            font-size: 24px;
+            color: #ffffff;
+            cursor: pointer;
+            z-index: 1000;
+        }
+  </style>
 </head>
 
 <body>
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <img src="img/logonovaflixer.PNG" class="navbar-logo" alt="...">
-      <a class="navbar-brand" href="#"></a>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Categorias
-        </button>
-        <ul class="dropdown-menu">
-          <li><button class="dropdown-item" type="button">Ação</button></li>
-          <li><button class="dropdown-item" type="button">Animação</button></li>
-          <li><button class="dropdown-item" type="button">Comédia</button></li>
-          <li><button class="dropdown-item" type="button">Documentários</button></li>
-          <li><button class="dropdown-item" type="button">Dorama</button></li>
-          <li><button class="dropdown-item" type="button">Ficção</button></li>
-          <li><button class="dropdown-item" type="button">Romance</button></li>
-          <li><button class="dropdown-item" type="button">Suspense</button></li>
-          <li><button class="dropdown-item" type="button">Terror</button></li>
-        </ul>
-        <button type="button" class="btn btn-secondary">Filmes</button>
-        <button type="button" class="btn btn-secondary">Séries</button>
-      </div>
-
-
+      <a href="login/">
+        <img src="img/logonovaflixer.PNG" class="navbar-logo" alt="...">
+      </a>
     </div>
+
+    <div>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Botão "Filmes" com efeito multicolorido -->
+    <div class="dropdown">
+      <a class="btn btn-multicolorido dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+        Filmes
+      </a>
+
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item dropdown-item-multicolorido" href="#acao">Ação</a></li>
+        <li><a class="dropdown-item dropdown-item-multicolorido" href="#animacao">Animação</a></li>
+        <li><a class="dropdown-item dropdown-item-multicolorido" href="#comedia">Comédia</a></li>
+        <li><a class="dropdown-item dropdown-item-multicolorido" href="#ficcao">Ficção</a></li>
+        <li><a class="dropdown-item dropdown-item-multicolorido" href="#romance">Romance</a></li>
+        <li><a class="dropdown-item dropdown-item-multicolorido" href="#suspense">Suspense</a></li>
+        <li><a class="dropdown-item dropdown-item-multicolorido" href="#terror">Terror</a></li>
+      </ul>
+    </div>
+
+    <!-- Botão "Séries" com efeito multicolorido -->
+    <div class="dropdown">
+      <a class="btn btn-multicolorido dropdown-toggle botaomargin" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Séries
+    </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item dropdown-item-multicolorido" href="#serieacao">Ação</a></li>
+        <li><a class="dropdown-item dropdown-item-multicolorido" href="#animes">Animes</a></li>
+        <li><a class="dropdown-item dropdown-item-multicolorido" href="#seriecomedia">Comédia</a></li>
+        <li><a class="dropdown-item dropdown-item-multicolorido" href="#documentarios">Documentários</a></li>
+        <li><a class="dropdown-item dropdown-item-multicolorido" href="#doramas">Doramas</a></li>
+        <li><a class="dropdown-item dropdown-item-multicolorido" href="#seriesficcao">Ficção</a></li>
+        <li><a class="dropdown-item dropdown-item-multicolorido" href="#seriesromance">Romance</a></li>
+        <li><a class="dropdown-item dropdown-item-multicolorido" href="#seriesterror">Terror</a></li>
+      </ul>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -56,36 +127,1264 @@
   <style>
     body {
       background-color: rgb(0, 0, 0);
+      color: #c9c9c9;
     }
   </style>
 
-  <!-- Carrossel -->
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <h2 class="titulo-carrossel">Filmes de Ação</h2>
 
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="img/elementos.jpg" class="imagem-carrossel">
-        <img src="img/avatar.jpg" class="imagem-carrossel">
-        <img src="img/croods.jpg" class="imagem-carrossel">
-        <img src="img/gatodebotas.jpg" class="imagem-carrossel">
-        <img src="img/mulan.jpg" class="imagem-carrossel">
-        <img src="img/luca filme.webp" class="imagem-carrossel">
-        <img src="img/luca2.jpg" class="imagem-carrossel">
+
+  <video controls autoplay>
+    <source src="vid/Trailer.mp4" poster="img/croods.jpeg" width="620">
+    Desculpe, seu navegador não suporta vídeos incorporados, mas não se preocupe,
+    você pode
+    <a href="https://archive.org/details/BigBuckBunny_124">baixá-lo</a>
+    e assisti-lo com seu player de vídeo favorito!
+  </video>
+
+  <br><br><br>
+
+
+  <section id="acao">
+    <h3 class="titulo-carrossel">Filmes de Ação</h3>
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
       </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col">
+              <img src="ação.img/avengers.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <a href="assistindo.html">
+              <img src="ação.img/duna.jpg" class="d-block w-100" alt="...">
+              </a>
+            </div>
+            <div class="col">
+              <img src="ação.img/fallout.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="ação.img/glass.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="ação.img/glatiador.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="ação.img/homesmen.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="ação.img/littlewomen.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col">
+              <img src="ação.img/missaoimpossivel.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="ação.img/screen.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="ação.img/sem tempo.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="ação.img/dolittle.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="ação.img/hobbit.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="ação.img/piratasdocaribe.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="ação.img/venon.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
 
-      <div class="carousel-item">
-        <img src="img/croods.jpg" class="imagem-carrossel">
-        <img src="img/avatar.jpg" class="imagem-carrossel">
-        <img src="img/elementos.jpg" class="imagem-carrossel">
-        <img src="img/madagascar.jpg" class="imagem-carrossel">
-        <img src="img/mulan.jpg" class="imagem-carrossel">
+        </div>
       </div>
-
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
 
+  </section>
+
+  <br><br>
+
+  <section id="animacao">
+  <h3 class="titulo-carrossel">Filmes de Animação</h3>
+
+  <div id="carouselExampleIndicators2" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col">
+            <img src="img/avatar.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="img/croods.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="img/gato de botas.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="img/luca1.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="img/madagastar.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="img/mulan.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="img/open season.jpeg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col">
+            <img src="img/zotopia.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="img/divertidamente2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="img/dory.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="img/hotel transilvania.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="img/os incriveis.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="img/home.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="img/pets.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </section>
+
+  <br><br>
+
+  <section id = "comedia">
+  <h3 class="titulo-carrossel">Filmes de comédia</h3>
+
+  <div id="carouselExampleIndicators3" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col">
+            <img src="comédia.img/autoda compadecida.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="comédia.img/branquelas.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="comédia.img/clubemulheres.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="comédia.img/curtindo.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="comédia.img/ferias.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="comédia.img/gasper.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="comédia.img/gentegrande.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col">
+            <img src="comédia.img/malvadas.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="comédia.img/operaçãocupido.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="comédia.img/todopanico.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="comédia.img/trocados.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="comédia.img/vovozona.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="comédia.img/vai que da certo.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="comédia.img/loira.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators3"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators3"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </section>
+
+  <br><br>
+
+  <section id = "ficcao">
+  <h3 class="titulo-carrossel">Filmes de Ficção</h3>
+
+  <div id="carouselExampleIndicators5" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col">
+            <img src="ficção.img/1917.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="ficção.img/divergente.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="ficção.img/futuro.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="ficção.img/inter estelar.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="dorama.img/disgraça.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="ficção.img/jogos.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="ficção.img/macacos.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col">
+            <img src="ficção.img/matrix.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="ficção.img/split.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="ficção.img/star.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="ficção.img/uma odisseia.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="ficção.img/mad max.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="ficção.img/show.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="ficção.img/x men.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators5"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators5"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </section>
+
+  <br><br>
+
+  <section id="romance">
+  <h3 class="titulo-carrossel">Filmes de Romance</h3>
+
+  <div id="carouselExampleIndicators6" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators6" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col">
+            <img src="romance.img/10 coisas.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="romance.img/ainda estou aqui.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="romance.img/antes de vc.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="romance.img/barraca do beijo.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="romance.img/culpa das estrelas.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="romance.img/diario.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="romance.img/love.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col">
+            <img src="romance.img/melhor de mim.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="romance.img/my girl.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="romance.img/o primeiro amor.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="romance.img/para todos garotos.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="romance.img/primeira vez.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="romance.img/querido john.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="romance.img/titanic.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators6"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators6"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </section>
+
+  <br><br>
+
+  <section id="suspense">
+  <h3 class="titulo-carrossel">Filmes de Suspense</h3>
+
+  <div id="carouselExampleIndicators7" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators7" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col">
+            <img src="suspense.img/after.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="suspense.img/agente stone.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="suspense.img/anna.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="suspense.img/batt.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="suspense.img/birdbox.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="suspense.img/casal lado.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="suspense.img/cemiterio.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col">
+            <img src="suspense.img/coldtake.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="suspense.img/core.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="suspense.img/megan.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="suspense.img/fugitiva.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="suspense.img/garota lago.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="ação.img/grace.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="suspense.img/ilha do medo.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators7"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators7"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </section>
+
+  <br><br>
+
+  <section id="terror">
+  <h3 class="titulo-carrossel">Filmes de Terror</h3>
+
+  <div id="carouselExampleIndicators8" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators8" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators8" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators8" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col">
+            <img src="terror.img/1994.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="terror.img/cabana.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="terror.img/caixa maldita.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="terror.img/dont look away.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="terror.img/dream.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="terror.img/evil.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="terror.img/exorcista.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col">
+            <img src="terror.img/fear street.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="terror.img/freira.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="terror.img/homi estranho.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="terror.img/it.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="terror.img/the omen.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="terror.img/trick treat.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="terror.img/survive.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators8"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators8"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </section>
+
+  <br><br>
+
+  <section id="serieacao">
+  <h3 class="titulo-carrossel">Séries de Ação</h3>
+
+  <div id="carouselExampleIndicators9" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators9" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators9" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators9" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col">
+            <img src="s.ação.img/13.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.ação.img/24.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.ação.img/arrow.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.ação.img/black sails.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.ação.img/game of thrones.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.ação.img/cobrakai.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.ação.img/jack rya.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col">
+            <img src="s.ação.img/la casa de papel.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.ação.img/madalorian.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.ação.img/narcos.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.ação.img/prision break.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.ação.img/strangerthing.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.ação.img/the boys.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.ação.img/the wicther.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators9"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators9"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </section>
+
+  <br><br>
 
 
+  <section id="animes"> 
+  <h3 class="titulo-carrossel">Animes</h3>
+
+  <div id="carouselExampleIndicators10" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators10" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators10" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators10" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col">
+            <img src="anime.img/akame ga kill.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="anime.img/another.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="anime.img/black cover.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="anime.img/buble.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="anime.img/demon.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="anime.img/desconhecido.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="anime.img/egg.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col">
+            <img src="anime.img/haikyui.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="anime.img/jujutsu.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="anime.img/mateus.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="anime.img/romantic.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="anime.img/naruto.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="anime.img/noragami.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="anime.img/vailet.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators10"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators10"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </section>
+
+  <br><br>
+
+  <section id="seriecomedia">
+  <h3 class="titulo-carrossel">Séries de comédia</h3>
+
+  <div id="carouselExampleIndicators11" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators11" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators11" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators11" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col">
+            <img src="s.comédia.img/a sogra que te pariu.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.comédia.img/eu nunca.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.comédia.img/friends.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.comédia.img/full house.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.comédia.img/good luck.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.comédia.img/i carly.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.comédia.img/henry.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col">
+            <img src="s.comédia.img/lab rats.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.comédia.img/sheldon.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.comédia.img/superstore.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.comédia.img/the big.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.comédia.img/todo mundo odeia o cris.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.comédia.img/victoria.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="s.comédia.img/insatible.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators11"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators11"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </section>
+
+  <br><br>
+
+  <section id="documentarios">
+  <h3 class="titulo-carrossel">Documentários</h3>
+
+  <div id="carouselExampleIndicators12" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators12" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators12" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators12" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col">
+            <img src="documentarios.img/a menina que matou os pais.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="documentarios.img/accidente.jfif" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="documentarios.img/american.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="documentarios.img/caso assunta.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="documentarios.img/caso menendes.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="documentarios.img/fungos.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="documentarios.img/justiça.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col">
+            <img src="documentarios.img/life bixos.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="documentarios.img/nardoni.jfif" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="documentarios.img/oceano.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="documentarios.img/perdidos.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="documentarios.img/revolta.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="documentarios.img/todo dia a mesma noite.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="col">
+            <img src="documentarios.img/volta priscila.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators12"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators12"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  </section>
+
+  <br><br>
+
+  <section id = "doramas">
+    <h3 class="titulo-carrossel">Doramas</h3>
+  
+    <div id="carouselExampleIndicators4" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col">
+              <img src="dorama.img/advogada.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="dorama.img/almas.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="dorama.img/beleza.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="dorama.img/celebracao.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="dorama.img/disgraça.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="dorama.img/escola.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="dorama.img/goblin.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col">
+              <img src="dorama.img/lovealarm.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="dorama.img/pretendente surpresa.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="dorama.img/mr.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="dorama.img/tomorrow.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="dorama.img/venus.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="dorama.img/queen.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="dorama.img/big.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+  
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators4"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators4"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </section>
+
+    <br><br>
+
+  <section id = "seriesficcao">
+    <h3 class="titulo-carrossel">Séries de Ficção</h3>
+  
+    <div id="carouselExampleIndicators13" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators13" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators13" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators13" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col">
+              <img src="s.ficção.img/barbarians.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.ficção.img/carbon.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.ficção.img/crown.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.ficção.img/dark.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.ficção.img/doctor who.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.ficção.img/expanse.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.ficção.img/files.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col">
+              <img src="s.ficção.img/fringe.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.ficção.img/galactica.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.ficção.img/hobbit.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.ficção.img/lost.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.ficção.img/reign.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.ficção.img/the rings.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.ficção.img/westword.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+  
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators13"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators13"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </section>
+
+    <br><br>
+
+  <section id = "seriesromance">
+    <h3 class="titulo-carrossel">Séries de Romance</h3>
+  
+    <div id="carouselExampleIndicators14" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators14" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators14" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators14" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col">
+              <img src="s.romance.img/bridgerton.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.romance.img/call the midwife.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.romance.img/diario de vampiros.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.romance.img/discovery.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.romance.img/doces magnolias.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.romance.img/downton abbey.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.romance.img/emilly paris.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col">
+              <img src="s.romance.img/jane.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.romance.img/normal pessoa.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.romance.img/outlander.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.romance.img/rainha.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.romance.img/sex.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.romance.img/this is us.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.romance.img/virgin riven.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+  
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators14"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators14"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </section>
+
+    <br><br>
+
+  <section id = "seriesterror">
+    <h3 class="titulo-carrossel">Séries de Terror</h3>
+  
+    <div id="carouselExampleIndicators15" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators15" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators15" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators15" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col">
+              <img src="s.terror.img/american horror.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.terror.img/ash.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.terror.img/servant.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.terror.img/bates motel.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.terror.img/castle.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.terror.img/dracula.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.terror.img/haunted.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col">
+              <img src="s.terror.img/hemlock.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.terror.img/house.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.terror.img/marianne.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.terror.img/outsider.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.terror.img/penny.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.terror.img/sabrina.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="col">
+              <img src="s.terror.img/zero.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+  
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators15"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators15"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </section>
+    
+    <br><br>
+  
+  
+
+
+
+    <!-- Botão para voltar ao topo -->
+    <div class="back-to-top" id="backToTop">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708z"/>
+        <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
+    </svg>
+  </div>
+
+  <!-- jQuery e Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+      // Mostrar o botão ao rolar a página
+      $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) {
+              $('#backToTop').fadeIn();
+          } else {
+              $('#backToTop').fadeOut();
+          }
+      });
+
+      // Scroll suave para o topo da página ao clicar no botão
+      $('#backToTop').click(function () {
+          $('html, body').animate({ scrollTop: 0 }, 800);
+          return false;
+      });
+  </script>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 
 </body>
 

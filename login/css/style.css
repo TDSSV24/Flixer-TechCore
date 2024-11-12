@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Wet+Paint&family=Unlock&display=swap");
+
+:root {
+  --accent-color: #58cef5;
+  --base-color: rgb(0, 0, 0);
+  --text-color: #b70e76;
+  --input-color: #F3F0FF;
+}
+
+
+.logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 30px;
+  /* align-self: flex-start; */
+}
+
+.logo-registro{
+  height: auto;
+  margin-bottom: 0px;
+  width: 130px;
+  margin-top: 35px;
+}
+
+html {
+  font-family: "Unlock", sans-serif;
+  font-size: 12pt;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.background-video {
+  width: 10vw;
+  /* Largura */
+  min-height: 200vh;
+  /* Altura */
+  margin-top: -280px;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(../img/filmes.png);
+  background-size: cover;
+  background-position: right;
+  overflow: hidden;
+  margin: 0px;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  /* Mantém o vídeo atrás do conteúdo */
+  pointer-events: none;
+  /* Impede interação com o vídeo */
+}
+
+.wrapper {
+  float: left;
+  position: relative;
+  z-index: 1;
+  /* Garante que o conteúdo esteja acima do vídeo */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Fundo branco semi-transparente para melhor leitura */
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: -10px  ;
+  box-sizing: border-box;
+  height: 100vh;
+  width: max(10%, 440px);
+  padding: 57px;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapperregistro {
+  margin-left: 33%  ;
+  box-sizing: border-box;
+  height: 100vh;
+  width: max(10%, 440px);
+  padding: 57px;
+  border-radius: 20px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+form {
+  width: min(400px, 100%);
+  margin-top: -5px;
+  margin-bottom: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+form>div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+form label {
+  flex-shrink: 0;
+  height: 50px;
+  width: 50px;
+  background-color: var(--accent-color);
+  fill: var(--base-color);
+  color: var(--base-color);
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+form input {
+  box-sizing: border-box;
+  flex-grow: 1;
+  min-width: 0;
+  height: 50px;
+  padding: 1em;
+  font: inherit;
+  border-radius: 0 10px 10px 0;
+  border: 2px solid var(--input-color);
+  border-left: none;
+  background-color: var(--input-color);
+  transition: 150ms ease;
+}
+
+form input:hover {
+  border-color: var(--accent-color);
+}
+
+form input:focus {
+  outline: none;
+  border-color: var(--text-color);
+}
+
+div:has(input:focus)>label {
+  background-color: var(--text-color);
+}
+
+form input::placeholder {
+  color: var(--text-color);
+}
+
+form button {
+  margin-top: 10px;
+  border: none;
+  border-radius: 1000px;
+  padding: .85em 2em;
+  background-color: var(--accent-color);
+  color: var(--base-color);
+  font: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 190ms ease;
+}
+
+form button:hover {
+  background-color: var(--text-color);
+}
+
+form button:focus {
+  outline: none;
+  background-color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media(max-width: 1100px) {
+  .wrapper {
+    width: min(600px, 100%);
+    border-radius: 0;
+  }
+}
+
+form div.incorrect label {
+  background-color: #f06272;
+}
+
+form div.incorrect input {
+  border-color: #f06272;
+}
+
+#error-message {
+  color: #f06272;
+  padding-bottom: 0px;
+}
+
+.formulario {
+  z-index: 2;
+  background-color: rgb(0, 0, 0, 0.6);
+}
+
+.formulario-registro {
+  z-index: 2;
+  background-color: rgb(0, 0, 0, 0.60);
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do Filme - Flixer</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-color: #000;
+        }
+
+        /* Botão de Sair com efeito multicolorido */
+        .btn-sair {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            background: linear-gradient(45deg, #ff5f6d, #ffc371, #40c9ff, #ffb6c1);
+            background-size: 300%;
+            transition: background-position 0.5s ease, transform 0.2s;
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        .btn-sair:hover {
+            background-position: right center;
+            transform: scale(1.05);
+        }
+
+        /* Estilização do link dentro do botão */
+        .btn-sair a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Container principal */
+        .movie-container {
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            height: 100vh;
+            padding: 20px;
+            background: url('ação.img/duna\ editada.jpg') no-repeat center center/cover;
+            overflow: hidden;
+        }
+
+        .movie-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        /* Conteúdo do filme */
+        .movie-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        /* Título */
+        .movie-title {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Sinopse */
+        .movie-description {
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        /* Informações do filme */
+        .movie-info {
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            color: #aaa;
+        }
+
+        /* Botões com efeito multicolorido */
+        .button-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-position 0.5s ease, transform 0.2s;
+            color: #fff;
+            background: linear-gradient(45deg, #585253, #ffc371, #40c9ff, #ffb6c1);
+            background-size: 300%;
+        }
+
+        .button:hover {
+            background-position: right center;
+            transform: scale(1.05);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Botão de Sair com efeito multicolorido -->
+    <button class="btn-sair">
+        <a href="home.html">⇦| Sair</a>
+    </button>
+
+    <div class="movie-container">
+        <div class="movie-overlay"></div>
+        <div class="movie-content">
+            <h1 class="movie-title">DUNA</h1>
+            <p class="movie-description">
+                Paul Atreides é um jovem brilhante, dono de um destino além de sua compreensão. Ele deve viajar para o
+                planeta mais perigoso do universo para garantir o futuro de seu povo.
+            </p>
+            <div class="movie-info">
+                <span>Ano: 2021</span> • <span>Duração: 2h 35min</span> • <span>Classificação: 14</span>
+            </div>
+            <div class="button-container">
+                <button class="button">▶ Play</button>
+                <button class="button">+ Favoritar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

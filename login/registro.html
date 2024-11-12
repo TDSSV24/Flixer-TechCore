@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- Meu CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Meu JS -->
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="wrapperregistro formulario-registro">
+        <img src="img/flixercópia.png" alt="logo-registro" class="logo-registro">
+        <h1>Login</h1>
+        <form action="" method="post" id="form">
+            <div>
+                <label for="name-input">
+                    <span>@</span>
+                </label>
+                <input type="name" name="name" id="name-input" placeholder="Informe seu nome">
+            </div>
+            <div>
+                <label for="email-input">
+                    <span>@</span>
+                </label>
+                <input type="email" name="email" id="email-input" placeholder="Digite seu e-mail">
+            </div>
+            <div>
+                <label for="password-input">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-lock-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2" />
+                    </svg>
+                </label>
+                <input type="password" name="password" id="password-input" placeholder="Crie uma senha">
+            </div>
+            <div>
+                <label for="repeat-password-input">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-lock-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2" />
+                    </svg>
+                </label>
+                <input type="password" name="password" id="repeat-password-input" placeholder="Confirme a senha">
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+        <p id="error-message"></p>
+        <p>Já é um Flixer?<a href="index.html">Faça login e mergulhe no melhor site de streaming!</a></p>
+       
+    </div>
+    <div>
+        
+    </div>
+</body>
+
+</html>

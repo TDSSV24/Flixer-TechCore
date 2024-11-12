@@ -1,5 +1,15 @@
-body {
-    background-color: rgb(0, 0, 0);
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3; /* Define a transparência em 70% */
+    z-index: -1;
 }
 
 .navbar-logo {
@@ -8,7 +18,7 @@ body {
 }
 
 .bg-body-tertiary {
-    --bs-bg-opacity: 1;
+    --bs-bg-opacity: 0.5;
     background-color: #212222 !important;
 }
 
@@ -24,7 +34,6 @@ body {
 header.masthead {
     padding-top: 10rem;
     padding-bottom: calc(10rem - 4.5rem);
-    /* background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/bg-masthead.jpg"); */
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -42,4 +51,12 @@ header.masthead .h1 {
 
 .mb-4 {
     margin-bottom: 1.5rem !important;
-  }
+}
+
+.botaomargin {
+    margin: 10px;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: -65px !important;
+}

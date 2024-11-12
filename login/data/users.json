@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Filassi",
+        "email": "filassi@senai.com.br",
+        "password": "30122007"
+    },
+    {
+        "name": "Amanda",
+        "email": "amanda@senai.com.br",
+        "password": "1315133"
+    },
+
+    {
+        "name": "Julianelli",
+        "email": "julianelli@senai.com.br",
+        "password": "123454321"
+
+    },
+
+    {
+        "name": "Julianelli",
+        "email": "julianelli@senai.com.br",
+        "password": "123454321"
+
+    },
+
+    {
+        "name": "Vieira",
+        "email": "mateusvelho@senai.com.br",
+        "password": "87654321"
+
+    },
+
+    {
+        "name": "Bia Silva",
+        "email": "anabeatrizsilva@senai.com.br",
+        "password": "0987654321"
+
+    },
+
+    {
+        "name": "Victor",
+        "email": "victor@senai.com.br",
+        "password": "123456"
+
+    }
+]
